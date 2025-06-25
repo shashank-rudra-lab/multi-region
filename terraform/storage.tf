@@ -18,6 +18,15 @@ resource "google_storage_bucket" "bucket2" {
   }
 }
 
+resource "google_storage_bucket" "bucket2" {
+  name          = "test-bucket"
+  location      = var.region2
+  force_destroy = true
+
+  versioning {
+    enabled = true
+  }
+}
 resource "google_firestore_database" "multidata" {
   name        = "multidata" # This is the database ID
   project     = var.project_id
