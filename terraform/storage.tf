@@ -19,7 +19,7 @@ resource "google_storage_bucket" "bucket2" {
 }
 
 resource "google_storage_bucket" "testbucket" {
-  name          = "test-bucket"
+  name          = "ncpl-shashankrudra-bucket"
   location      = var.region2
   force_destroy = true
 
