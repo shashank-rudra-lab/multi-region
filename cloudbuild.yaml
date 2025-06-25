@@ -16,4 +16,6 @@ steps:
       'transfer', 'jobs', 'run',
       '5103117432597975895'
     ]
+options:
+  logging: CLOUD_LOGGING_ONLY
 
