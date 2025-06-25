@@ -1,4 +1,9 @@
 terraform {
+  backend "gcs" {
+    bucket  = "ncpl-terraform-state"
+    prefix  = "multi-region/state"
+  }
+
   required_providers {
     google = {
       source  = "hashicorp/google"
