@@ -3,11 +3,13 @@ steps:
   - name: 'hashicorp/terraform:latest'
     entrypoint: 'terraform'
     args: ['init']
+    dir: 'terraform'
 
   # 2. Terraform Apply
   - name: 'hashicorp/terraform:latest'
     entrypoint: 'terraform'
     args: ['apply', '-auto-approve']
+    dir: 'terraform'
 
   # 3. Trigger Cloud Storage Transfer Job (GCS bucket replication)
   - name: 'gcr.io/cloud-builders/gcloud'
